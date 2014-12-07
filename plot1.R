@@ -6,7 +6,6 @@ mydata$Time <- strptime(paste(mydata$Date,mydata$Time), format="%d/%m/%Y %H:%M:%
 head(mydata$Time)
 data <- mydata[as.Date(mydata$Time)==date1|as.Date(mydata$Time)==date2,]
 data$Date <-NULL
-tail(data)
 
 data$Global_active_power <- as.numeric(levels(data$Global_active_power))[data$Global_active_power]
 png(file = "plot1.png",  width = 480, height = 480, units = "px")
